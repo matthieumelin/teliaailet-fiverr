@@ -1,0 +1,53 @@
+/* ==========================================================================
+   BODY / ELEMENT
+   Le body permet d'initialiser les propriétés générales de la page.
+   Les éléments de la page vont hérités des propriétés inscrite dans body
+   ========================================================================== */
+
+body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-content);
+    color: var(--color-primary);
+    line-height: 1.6;
+    background: var(--color-bg);
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+    .website-wrapper {
+        padding-top: 200px;
+        position: relative;
+        scroll-behavior: smooth;
+
+        .bg {
+          position: absolute;
+          top: 0px;
+          left: 10%;
+          z-index: -1;
+          width: 70%;
+          height: 500px;
+      }
+
+        @media screen and (max-width: $breakpoint-md) {
+          padding-top: 0px;
+        }
+        
+    }
+    
+}
+
+ul{
+    list-style-type: none;
+}
+::-webkit-scrollbar {
+    width: 15px;
+  }
+::-webkit-scrollbar-track {
+    background: var(--color-white);
+    border-radius: 20px;
+    border: 2px solid rgba(185, 174, 188, 1);
+  }
+::-webkit-scrollbar-thumb {
+    background: var(--color-secondary);
+    border-radius: 20px;
+  }

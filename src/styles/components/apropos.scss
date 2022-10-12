@@ -1,0 +1,306 @@
+.apropos {
+    width: 100%;
+    padding: 30px 100px;
+
+    .propos {
+        margin-bottom: 70px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        h1 {
+            margin-bottom: 20px;
+        }
+        div {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+
+            p {
+                font-size: var(--font-size-h5);
+            }
+        }
+        ul {
+            display: flex;
+            justify-content: space-between;
+
+            li {
+                position: relative;
+                 width: 20%;
+                 display: flex;
+                 justify-content: center;
+                 align-items: center;
+                 h4 {
+                    position: relative;
+                    z-index: 10;
+                    color: var(--color-secondary);
+                }
+                .img {
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: -10;
+
+                    .icon-bg {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            .even {
+                h4 {
+                    color: var(--color-primary);
+                }
+                .img {
+                    color: var(--color-secondary);
+                }
+            }
+            .big {
+                width: 25%;
+                h4 {
+                    font-size: var(--font-size-h5);
+                }
+            }
+        }
+    }
+    .competences {
+        margin-bottom: 70px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        position: relative;
+
+        .bg-competence{
+            position: absolute;
+            width: 50%;
+            left: -500px;
+            top: -300px;
+            z-index: -100;
+
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+
+            li {
+                position: relative;
+                 width: 30%;
+                 display: flex;
+                 align-items: center;
+                 
+                 .content {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    z-index: 10;
+                    color: var(--color-secondary);
+                    h3 {
+                        font-size: var(--font-size-h4);
+                        text-align: center;
+                    }
+                    a {
+                        color: inherit;
+                    }
+                }
+                .img {
+                    width: 125%;
+                    height: 125%;
+                    position: absolute;
+                    top: -22px;
+                    left: -31px;
+                    z-index: -10;
+
+                    .icon-bg {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            .even {
+                .content {
+                    color: var(--color-primary);
+                }
+                .img {
+                    color: var(--color-secondary);
+                }
+            }
+        }
+    }
+    .logiciels {
+        margin-bottom: 70px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        .logiciels-container {
+            display: grid;
+            gap: 30px 80px;
+            grid-template-columns: repeat(auto-fit,minmax(550px,1fr));
+
+            .logiciel {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+
+                .bar-container{
+                    width: 80%;
+                    height: 32px;
+                    background-color: var(--color-white);
+                    border: 3px solid var(--color-primary);
+                    display: flex;
+                    border-radius: 44px;
+                    margin-top: 20px;
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);;
+
+                    .bar{
+                        height: 100%;
+                        background-color: var(--color-primary);
+                        border-radius: 50px;
+                        transition-duration: 1s;
+                    }
+                    .bar1, .bar5 {
+                        width: 80%;
+                    }
+                    .bar2, .bar6 {
+                        width: 40%;
+                    }
+                    .bar7 {
+                        width: 100%;
+                    }
+                    .bar3 {
+                        width: 50%;
+                    }
+                    .bar4 {
+                        width: 70%;
+                    }
+                    .bar8 {
+                        width: 90%;
+                    }
+                    
+                }
+                
+            }
+        }
+    }
+
+    .passions {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        ul {
+            display: flex;
+            gap: 0px;
+            justify-content: center;
+            align-items: center;
+
+            li {
+                position: relative;
+                padding: 75px;
+
+                img {
+                    width: 100px;
+                }
+
+                .glass {
+                    filter: blur(10px);
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    z-index: -1;
+                    width: 100%;
+                    height: 100%;
+                    img {
+                        width: 150%;
+                        height: 100%;
+                    }
+                }
+                
+                .img {
+                    width: auto;
+                }
+            }
+
+            
+        }
+        .savoir-plus {
+            // .video-propos {
+            //     margin: 100px auto;
+                
+            //     video {
+            //         width: 50%;
+            //         display: block;
+            //         margin: 0 auto;
+            //     }
+            // }
+            .video-propos {
+                margin: 100px auto;
+                
+                .video__media{
+                    height: 70%;
+                    border-radius: 40px;
+                    overflow: hidden;
+                    border: 4px solid var(--color-secondary);
+                    color: var(--color-primary);
+                }
+            }
+        }
+    }
+    @media screen and (max-width: $breakpoint-md) {
+        .propos {
+            div {
+                flex-direction: column;
+            }
+            ul {
+                flex-direction: column;
+                gap: 30px;
+
+                li, .big {
+                    width: 100%;
+                    padding-top: 20px;
+                }
+            }
+        }
+        .competences {
+            ul {
+                flex-direction: column;
+                gap: 30px;
+
+                li {
+                    width: 100%;
+                }
+            }
+        }
+        .logiciels {
+            .logiciels-container {
+                gap: 20px;
+
+                .logiciel {
+                    gap: 10px;
+
+                    .bar-container {
+                        width: 40%;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+        .passions {
+            gap: 30px;
+            ul {
+                flex-direction: column;
+                gap: 10px;
+
+                li {
+                    img {
+                        width: 100px;
+                    }
+                }
+            }
+        }
+    }
+}

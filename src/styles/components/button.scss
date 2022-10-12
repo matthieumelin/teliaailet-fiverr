@@ -1,0 +1,19 @@
+/* ==========================================================================
+   button / component
+   ========================================================================== */
+   .button {
+      padding: 0px 15px;
+      background: none;
+      color: var(--color-primary);
+      border: 3px solid var(--color-primary);
+      position: relative;
+      height: fit-content;
+      outline: none;
+      cursor: pointer;
+
+      &:hover {
+         background-color: var(--color-secondary);
+         color: var(--color-primary);
+      }
+   }
+   

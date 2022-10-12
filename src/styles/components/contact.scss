@@ -1,0 +1,161 @@
+@mixin button($bcolor,
+$url,
+$x1,
+$y1,
+$bor,
+$col) {
+ background: $bcolor;
+ -webkit-mask: url($url);
+ mask: url($url);
+ -webkit-mask-size: $x1 $y1;
+ mask-size: $x1 $y1;
+ border: $bor;
+ color: $col;
+}
+.contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .form-container {
+        .row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+
+            .input-container {
+                border: 1px solid rgba(33, 26, 68, 0.5);
+                padding: 5px 25px;
+                display: flex;
+                gap: 10px;
+                align-items: center;
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    img {
+                        width: 40px;
+                    }
+                }
+
+                input {
+                    border: none;
+                    outline: none;
+                }
+            }
+        }
+        textarea {
+            width: 100%;
+            padding: 15px 10px;
+            border: 1px solid rgba(33, 26, 68, 0.5);
+            outline: none;
+        }
+        .button-container-1 {
+            position: relative;
+            display: block;
+            width: fit-content;
+            height: 50px;
+            margin-left: auto;
+            margin-right: 0;
+            overflow: hidden;
+            border: 1px solid var(--color-primary);
+            font-weight: 300;
+            transition: 0.5s;
+            
+            letter-spacing: 1px;
+             border-radius: 8px;
+           
+            button {
+             width: 101%;
+             text-transform: uppercase;
+             height: 100%;
+             font-weight: 300;
+             padding: 13px 50px;
+             letter-spacing: 2px;
+             font-weight: bold;
+             font-family: var(--font-third);
+             margin: 0;
+           
+             @include button(var(--color-primary),
+             "https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png",
+             2300%,
+             100%,
+             none,
+             #fff);
+             -webkit-animation: ani2 0.7s steps(22) forwards;
+             animation: ani2 0.7s steps(22) forwards;
+           
+             &:hover {
+              -webkit-animation: ani 0.7s steps(22) forwards;
+              animation: ani 0.7s steps(22) forwards;
+             }
+            }
+            .mas {
+                position: absolute;
+                color: var(--color-primary);
+                text-align: center;
+                font-family: var(--font-third);
+                width: 101%;
+                font-weight: 300;
+                position: absolute;
+                margin-top: 10px;
+                overflow: hidden;
+                font-weight: bold;
+                text-transform: uppercase;
+            
+            }
+            @-webkit-keyframes ani {
+                from {
+                 -webkit-mask-position: 0 0;
+                 mask-position: 0 0;
+                }
+               
+                to {
+                 -webkit-mask-position: 100% 0;
+                 mask-position: 100% 0;
+                }
+               }
+               @keyframes ani2 {
+                from {
+                 -webkit-mask-position: 100% 0;
+                 mask-position: 100% 0;
+                }
+               
+                to {
+                 -webkit-mask-position: 0 0;
+                 mask-position: 0 0;
+                }
+               }
+               
+               @keyframes ani {
+                from {
+                 -webkit-mask-position: 0 0;
+                 mask-position: 0 0;
+                }
+               
+                to {
+                 -webkit-mask-position: 100% 0;
+                 mask-position: 100% 0;
+                }
+               }
+            
+            
+           }
+    }
+    @media screen and (max-width: $breakpoint-md) {
+        .form-container {
+            .row {
+                flex-direction: column;
+                width: 100%;
+
+                .input-container {
+                    width: 100%;
+                }
+            }
+            button {
+                margin: 20px auto 0;
+            }
+        }
+    }
+}

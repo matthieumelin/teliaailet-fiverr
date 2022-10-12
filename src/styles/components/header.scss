@@ -1,0 +1,306 @@
+@mixin button($bcolor,
+$url,
+$x1,
+$y1,
+$bor,
+$col) {
+ background: $bcolor;
+ -webkit-mask: url($url);
+ mask: url($url);
+ -webkit-mask-size: $x1 $y1;
+ mask-size: $x1 $y1;
+ border: $bor;
+ color: $col;
+}
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.7s ease-in-out;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+
+    .respo-nav {
+        display: none;
+    }
+  
+    .nav-primary {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 45px;
+
+        .left {
+            display: flex;
+            gap: 110px;
+            position: relative;
+
+            
+            .pages {
+                flex: auto;
+                display: flex;
+                //align-items: center;
+                justify-content: flex-end;
+
+                
+                
+        
+                .page-container {
+                    padding: 12px 10px;
+                    
+                    a {
+                        width: 100%;
+                        display: block;
+                        padding: 10px;
+                        border: 2px solid transparent;
+                        //transition: all 0.3s ease-in-out;
+                        color: inherit;
+                        font-weight: bold;
+                        font-family: var(--font-primary);
+                        position: relative;
+                        font-size: var(--font-size-h5);
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: 0px;
+                            left: 10%;
+                            width: 80%;
+                            height: 3px;
+                            background-color: var(--color-primary);
+                            transform: scaleX(0);
+                            border-radius: 10px;
+                            transition: transform 0.3s ease-in;
+                            transform-origin: right;
+                        }
+                        &:hover:after  {
+                            transform: scaleX(1);
+                            transform-origin: left;
+                            transition: transform 0.3s ease-out;
+                        }
+                    }
+                }
+                
+            }
+        }
+        .right {
+            .button-container-1 {
+                position: relative;
+                height: 50px;
+                margin-left: auto;
+                margin-right: auto;
+                overflow: hidden;
+                border: 1px solid var(--color-primary);
+                font-weight: 300;
+                transition: 0.5s;
+                
+                letter-spacing: 1px;
+                 border-radius: 8px;
+               
+                button {
+                 width: 101%;
+                 text-transform: uppercase;
+                 height: 100%;
+                 font-weight: 300;
+                 padding: 13px 15px;
+                 letter-spacing: 1px;
+                 font-weight: bold;
+                 font-family: var(--font-primary);
+                 margin: 0;
+               
+                 @include button(var(--color-primary),
+                 "https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png",
+                 2300%,
+                 100%,
+                 none,
+                 #fff);
+                 -webkit-animation: ani2 0.7s steps(22) forwards;
+                 animation: ani2 0.7s steps(22) forwards;
+               
+                 &:hover {
+                  -webkit-animation: ani 0.7s steps(22) forwards;
+                  animation: ani 0.7s steps(22) forwards;
+                 }
+                }
+                .mas {
+                    position: absolute;
+                    color: var(--color-primary);
+                    text-align: center;
+                    font-family: var(--font-primary);
+                    width: 101%;
+                    font-weight: 300;
+                    position: absolute;
+                    margin-top: 10px;
+                    overflow: hidden;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                
+                }
+                @-webkit-keyframes ani {
+                    from {
+                     -webkit-mask-position: 0 0;
+                     mask-position: 0 0;
+                    }
+                   
+                    to {
+                     -webkit-mask-position: 100% 0;
+                     mask-position: 100% 0;
+                    }
+                   }
+                   @keyframes ani2 {
+                    from {
+                     -webkit-mask-position: 100% 0;
+                     mask-position: 100% 0;
+                    }
+                   
+                    to {
+                     -webkit-mask-position: 0 0;
+                     mask-position: 0 0;
+                    }
+                   }
+                   
+                   @keyframes ani {
+                    from {
+                     -webkit-mask-position: 0 0;
+                     mask-position: 0 0;
+                    }
+                   
+                    to {
+                     -webkit-mask-position: 100% 0;
+                     mask-position: 100% 0;
+                    }
+                   }
+                
+                
+               }
+               
+        }
+        
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+        width: 100%;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        height: 100px;
+        background-color: var(--color-bg);
+        .nav-primary {
+            transform: translateX(150%);
+            //transition: all 5s ease-in-out;
+
+            .pages {
+                display: none;
+            }
+        }
+        .respo-nav {
+            display: flex;
+            padding: 30px 40px;
+            justify-content: space-between;
+
+            .header__toggle {
+                --size: 50px;
+                position: relative;
+                background-color: transparent;
+                color: currentColor;
+                border: none;
+                height: var(--size);
+                width: var(--size);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 10px;
+                cursor: pointer;
+    
+                span {
+                    height: 4px;
+                    width: 100%;
+                    background-color: var(--color-secondary);
+                    display: inline-block;
+                    border-radius: 5px;
+    
+                }
+                @media screen and (min-width: $breakpoint-md) {
+                    display: none;
+                }
+            }
+        }
+
+        
+    }
+    
+}
+.nav-is-active {
+    overflow: hidden;
+    height: 100vh;
+
+    .header {
+        transform: translateY(0%);
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--color-secondary);
+        .respo-nav {
+            position: absolute;
+            color: var(--color-primary);
+            z-index: 10;
+            width: 100%;
+            .logo-container {
+                display: none;
+            }
+            .header__toggle {
+                span {
+                    position: absolute;
+                    background-color: var(--color-primary);
+                    top: calc(50% - 2px);
+                    &:nth-child(1) {
+                        transform: rotate(45deg);
+                    }
+                    &:nth-child(2) {
+                        transform: scaleX(0);
+                    }
+                    &:nth-child(3) {
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+        .nav-primary {
+            position: absolute;
+            width: 100%;
+            top: 100px;
+            left: 0%;
+            transform: translateX(0%);
+            flex-direction: column;
+            z-index: 10;
+            gap: 50px;
+
+            .left {
+                flex-direction: column;
+                gap: 10px;
+
+                .pages {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0;
+                    gap: 0;
+                    .page-container {
+                        padding: 0 10px;
+                        .page-link {
+                            text-align: left;
+                            color: var(--color-primary);
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}
+.header-hidden.is-scrolling-down {
+    .header {
+        transform: translateY(-100%) translateY(4px);
+    }
+}

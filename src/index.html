@@ -1,0 +1,658 @@
+{%
+    include '_partials/_header.html'
+%}
+<img src="./assets/images/header-bg.png" class="bg" alt="header background">
+   
+<header class="header" data-component="Header" data-hide="auto">
+    <div class="respo-nav">
+        <a href="#" class="logo-container">
+            <img src="./assets/images/logo.svg" alt="logo image">
+        </a>
+        <button class="header__toggle js-toggle">
+            <span></span>
+            <span></span> 
+            <span></span>
+        </button>
+    </div>
+    <div class="nav-primary">
+        <div class="left">
+            <a href="#" class="logo-container">
+                <img src="./assets/images/logo.svg" alt="logo image">
+            </a>
+            
+            <ul class="pages">
+                
+                <li class="page-container actif">
+                    <a href="#hero" class="page-link">
+                        Acceuil
+                    </a>
+                </li>
+                <li class="page-container">
+                    <a href="#apropos" class="page-link">
+                        A propos 
+                    </a>
+                </li>
+                <li class="page-container">
+                    <a href="#projets" class="page-link">
+                        Projets 
+                    </a>
+                </li>
+                <li class="page-container">
+                    <a href="#contact" class="page-link">
+                        Contact 
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="button-container-1">
+                <span class="mas">Telecharger mon cv</span>
+                <button id='work' type="button" name="Hover">Telecharger mon cv</button>
+            </div>
+        
+        </div>
+</header>
+<nav class="left-nav" data-component="NavLeft">
+    <img src="./assets/images/navLeft.png" alt="nav background">
+    <ul>
+        <li class="nav-left-item"><a href="https://www.youtube.com">
+            <svg class="icon icon--lg">
+                <use xlink:href="#icon-youtube"></use>
+            </svg>
+        </a></li>
+        <li class="nav-left-item"><a href="https://www.behance.net/">
+            <svg class="icon icon--lg">
+                <use xlink:href="#icon-be"></use>
+            </svg>
+        </a></li>
+        <li class="nav-left-item"><a href="https://www.linkedin.net/">
+            <svg class="icon icon--lg">
+                <use xlink:href="#icon-linkedin"></use>
+            </svg>
+        </a></li>
+        <li class="nav-left-item"><a href="https://www.instagram.net/">
+            <svg class="icon icon--lg">
+                <use xlink:href="#icon-instagram"></use>
+            </svg>
+        </a></li>
+    </ul>
+</nav>
+<section class="hero" id="hero">
+    <div class="glass">
+        <img src="./assets/images/hero-bg.png" alt="hero background">
+    </div>
+    <div class="description">
+        <h1>Benlaredj Maria Ichtar</h1>
+        <h3>Designer Junior, production vidéo</h3>
+    </div>
+    <div class="video video-hero" data-component="Video" data-video-id="LEdJOMHxzM0" data-controls-hide="true">
+        
+        <div class="video__media js-video">
+            <img src="assets/images/glass.png" alt="teaser de production" class="js-poster">
+            <svg class="icon icon--xl">
+                <use xlink:href="#icon-play"></use>
+            </svg>
+        </div>
+    </div>
+    
+</section>
+<section class="apropos" id="apropos">
+    <div class="propos">
+        <h1>Àpropos de moi</h1>
+        <div>
+            <img src="./assets/images/apropos.png" alt="a propos photo">
+            <p>Je m'appelle Maria iChtar, finissante en techniques d’intégration multimédia, au cégep d'Édouard-Montpetit. Je me cherche actuellement un stage en design
+                ou et en vidéo.</p>
+        </div>
+        <ul>
+            <li class="odd">
+                <h4>Polyvalente</h4>
+                <div class="img">
+                    <svg class="icon icon-bg">
+                        <use xlink:href="#icon-odd"></use>
+                    </svg>
+                </div>
+                
+            </li>
+            <li class="even">
+                <h4>Autonome</h4>
+                <div class="img">
+                    <svg class="icon icon-bg">
+                        <use xlink:href="#icon-odd"></use>
+                    </svg>
+                </div>
+            </li>
+            <li class="odd">
+                <h4>J’apprends vite</h4>
+                <div class="img">
+                    <svg class="icon icon-bg">
+                        <use xlink:href="#icon-odd"></use>
+                    </svg>
+                </div>
+            </li>
+            <li class="even big">
+                <h4>
+                    j’ai le soucis du détail <br>
+                    et je gére bien le stress</h4>
+                    <div class="img">
+                        <svg class="icon icon-bg">
+                            <use xlink:href="#icon-odd"></use>
+                        </svg>
+                    </div>
+            </li>
+        </ul>
+    </div>
+    <div class="competences">
+        <img src="./assets/images/competences-bg.png" alt="competences bg" class="bg-competence">
+        <h1>Mes compétences</h1>
+        <ul>
+            <li class="odd">
+                <div class="content">
+                    <a href="">
+                        <svg class="icon icon--lg">
+                            <use xlink:href="#icon-illustration"></use>
+                        </svg>
+                    </a>
+                    <h3>Web Design & Illustration</h3>
+                </div>
+                <div class="img">
+                    <svg class="icon icon-bg">
+                        <use xlink:href="#icon-odd"></use>
+                    </svg>
+                </div>
+            </li>
+            <li class="even">
+                <div class="content">
+                    <a href="">
+                        <svg class="icon icon--lg">
+                            <use xlink:href="#icon-3d"></use>
+                        </svg>
+                    </a>
+                    <h3>Modélisation 3D <br>
+                        & <br>
+                         Animation 2D</h3>
+                </div>
+                <div class="img">
+                    <svg class="icon icon-bg">
+                        <use xlink:href="#icon-odd"></use>
+                    </svg>
+                </div>
+                
+            </li>
+            <li class="odd">
+                <div class="content">
+                    <a href="">
+                        <svg class="icon icon--lg">
+                            <use xlink:href="#icon-montage"></use>
+                        </svg>
+                    </a>
+                    <h3>Graphisme & Montage <br>
+                        Vidéo</h3>
+                </div>
+                <div class="img">
+                    <svg class="icon icon-bg">
+                        <use xlink:href="#icon-odd"></use>
+                    </svg>
+                </div>
+                
+            </li>
+        </ul>
+    </div>
+    <div class="logiciels">
+        <h1>Logiciels d’expertise</h1>
+        <div class="logiciels-container">
+            <div class="logiciel">
+                <span>
+                    <svg class="icon icon--xl">
+                        <use xlink:href="#icon-figma"></use>
+                    </svg>
+                </span>
+                <div class="bar-container">
+                    <div class="bar bar1"></div>
+                </div>
+            </div>
+            <div class="logiciel">
+                <span>
+                    <svg class="icon icon--xl">
+                        <use xlink:href="#icon-ps"></use>
+                    </svg>
+                </span>
+                <div class="bar-container">
+                    <div class="bar bar2"></div>
+                </div>
+            </div>
+            <div class="logiciel">
+                <span>
+                    <svg class="icon icon--xl">
+                        <use xlink:href="#icon-ai"></use>
+                    </svg>
+                </span>
+                <div class="bar-container">
+                    <div class="bar bar3"></div>
+                </div>
+            </div>
+            <div class="logiciel">
+                <span>
+                    <svg class="icon icon--xl">
+                        <use xlink:href="#icon-ae"></use>
+                    </svg>
+                </span>
+                <div class="bar-container">
+                    <div class="bar bar4"></div>
+                </div>
+            </div>
+            <div class="logiciel">
+                <span>
+                    <svg class="icon icon--xl">
+                        <use xlink:href="#icon-ae"></use>
+                    </svg>
+                </span>
+                <div class="bar-container">
+                    <div class="bar bar5"></div>
+                </div>
+            </div>
+            <div class="logiciel">
+                <span>
+                    <svg class="icon icon--xl">
+                        <use xlink:href="#icon-logiciel1"></use>
+                    </svg>
+                </span>
+                <div class="bar-container">
+                    <div class="bar bar6"></div>
+                </div>
+            </div>
+            <div class="logiciel">
+                <span>
+                    <svg class="icon icon--xl">
+                        <use xlink:href="#icon-logiciel2"></use>
+                    </svg>
+                </span>
+                <div class="bar-container">
+                    <div class="bar bar7"></div>
+                </div>
+            </div>
+            <div class="logiciel">
+                <span>
+                    <svg class="icon icon--xl">
+                        <use xlink:href="#icon-logiciel3"></use>
+                    </svg>
+                </span>
+                <div class="bar-container">
+                    <div class="bar bar8"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="passions">
+        <h1>Mes passions</h1>
+        <ul>
+            <li>
+                <img src="./assets/images/passion1.png" class="img" alt="passion img">
+                <div class="glass">
+                    <img src="./assets/images/passion-bg.png" class="bg" alt="passion bg">
+                </div>
+            </li>
+            <li>
+                <img src="./assets/images/passion2.png" class="img" alt="passion img">
+                <div class="glass">
+                    <img src="./assets/images/passion-bg.png" class="bg" alt="passion bg">
+                </div>
+            </li>
+            <li>
+                <img src="./assets/images/passion3.png" class="img" alt="passion img">
+                <div class="glass">
+                    <img src="./assets/images/passion-bg.png" class="bg" alt="passion bg">
+                </div>
+            </li>
+            <li>
+                <img src="./assets/images/passion4.png" class="img" alt="passion img">
+                <div class="glass">
+                    <img src="./assets/images/passion-bg.png" class="bg" alt="passion bg">
+                </div>
+            </li>
+        </ul>
+        <div class="savoir-plus">
+            <h1>En savoir plus sur moi</h1>
+            <!-- <div class="video video-propos">
+                <video width="320" height="240" controls>
+                    <source src="./assets/video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video>
+            </div> -->
+            <div class="video video-propos" data-component="Video" data-video-id="LEdJOMHxzM0" data-controls-hide="true">
+        
+                <div class="video__media js-video">
+                    <img src="assets/images/glass.png" alt="teaser de production" class="js-poster">
+                    <svg class="icon icon--xl">
+                        <use xlink:href="#icon-play"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="projets" id="projets">
+    <h1>Mes projets</h1>
+    <div class="projet">
+        <div class="left">
+            <div class="glass">
+                <img src="./assets/images/projet-bg.png" alt="projet background">
+            </div>
+            <h2 class="chapitre">Chapitre 01</h2>
+            <h1 class="titre">Arabella </h1>
+            <h2 class="sous-titre">Character design</h2>
+            <p class="description">je suis une mordue d’Harry Potter et j’écris en ce moment même une fanfiction. En combinant ma passion du dessin et mes compétence de design j’ai décidé d’illustrer le personnage principale de mon histoire... </p>
+        </div>
+        <div class="center">
+            <div class="img-container">
+                <img src="./assets/images/projet11.png" alt="projet img">
+            </div>
+            <div class="logos">
+                <span class="logo">
+                    <svg class="icon icon--xl">
+                        <use xlink:href="#icon-logiciel2"></use>
+                    </svg>
+                </span>
+            </div>
+        </div>
+        <div class="right">
+            <img src="./assets/images/projet12.png" alt="projet img">
+            <div>
+                <a href="">
+                   <span>En savoir plus</span>  <svg class="icon icon--xl">
+                        <use xlink:href="#icon-arrow"></use>
+                    </svg>
+                </a>
+                
+            </div>
+            
+        </div>
+    </div>
+    <div class="projet">
+        <div class="left">
+            <div class="glass">
+                <img src="./assets/images/projet-bg.png" alt="projet background">
+            </div>
+            <h2 class="chapitre">Chapitre 02</h2>
+            <h1 class="titre">The Red Olive </h1>
+            <h2 class="sous-titre">Interaction audio</h2>
+            <p class="description">ce projet a été réalisé en mémoire d’une personne chère à mon coeur... il a été concçu entièrement dans Touchdesigner. </p>
+        </div>
+        <div class="center">
+            <div class="video-container">
+                <div class="video video-projet" data-component="Video" data-video-id="LEdJOMHxzM0" data-controls-hide="true">
+                    <div class="video__media js-video">
+                        <img src="assets/images/projet21.png" alt="teaser de production" class="js-poster">
+                        <svg class="icon icon--xl">
+                            <use xlink:href="#icon-play"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="logos">
+                <a href="" class="logo">
+                    <svg class="icon icon--xl">
+                        <use xlink:href="#icon-logiciel3"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="right">
+            <img src="./assets/images/projet22.png" alt="projet img">
+            <div>
+                <a href="">
+                   <span>En savoir plus</span>  <svg class="icon icon--xl">
+                        <use xlink:href="#icon-arrow"></use>
+                    </svg>
+                </a>
+                
+            </div>
+            
+        </div>
+    </div>
+    <div class="projet">
+        <div class="left">
+            <div class="glass">
+                <img src="./assets/images/projet-bg.png" alt="projet background">
+            </div>
+            <h2 class="chapitre">Chapitre 03</h2>
+            <h1 class="titre">Foot Goal </h1>
+            <h2 class="sous-titre">Animation 2D</h2>
+            <p class="description">ce projet a été réalisé dans le cadre d’un jeu de radio. Illustrations faites dans illustrator, animations faites dans after effect. </p>
+        </div>
+        <div class="center">
+            <div class="video-container">
+                <div class="video video-projet" data-component="Video" data-video-id="LEdJOMHxzM0" data-controls-hide="true">
+                    <div class="video-border"></div>
+                    <div class="video__media js-video">
+                        <img src="assets/images/projet31.png" alt="teaser" class="js-poster">
+                        <svg class="icon icon--xl">
+                            <use xlink:href="#icon-play"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="logos">
+                <a href="" class="logo">
+                    <svg class="icon icon--xl">
+                        <use xlink:href="#icon-ai"></use>
+                    </svg>
+                </a>
+                <a href="" class="logo">
+                    <svg class="icon icon--xl">
+                        <use xlink:href="#icon-ae"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="right">
+            <img src="./assets/images/projet32.png" alt="projet img">
+            <div>
+                <a href="">
+                   <span>En savoir plus</span>  <svg class="icon icon--xl">
+                        <use xlink:href="#icon-arrow"></use>
+                    </svg>
+                </a>
+                
+            </div>
+            
+        </div>
+    </div>
+    <div class="projet">
+        <div class="left">
+            <div class="glass">
+                <img src="./assets/images/projet-bg.png" alt="projet background">
+            </div>
+            <h2 class="chapitre">Chapitre 04</h2>
+            <h1 class="titre">Recettes en Pot </h1>
+            <h2 class="sous-titre">Design UI/UX</h2>
+            <p class="description">ce projet a été réalisé dans le cadre d’un cours. Le but était de remodéliser un site web existant. </p>
+        </div>
+        <div class="center">
+            <div class="img-container">
+                <img src="./assets/images/projet41.png" alt="projet img">
+            </div>
+            <div class="logos">
+                <a href="" class="logo">
+                    <svg class="icon icon--xl">
+                        <use xlink:href="#icon-figma"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="right">
+            <img src="./assets/images/projet42.png" alt="projet img">
+            <div>
+                <a href="">
+                   <span>En savoir plus</span>  <svg class="icon icon--xl">
+                        <use xlink:href="#icon-arrow"></use>
+                    </svg>
+                </a>
+                
+            </div>
+            
+        </div>
+    </div>
+    <div class="autres">
+        <img src="./assets/images/bg-autres.png" alt="bg autres" class="bg-autres">
+        <div class="description-container">
+            <h2 class="chapitre">Chapitre 05</h2>
+            <h1 class="titre">Autre Projets </h1>
+            <p class="description">Un vaste océan de projets, 75% sont personnels. Il y a littéralement de tout ! n’est-elle pas magnifique la polyvalence ? </p>
+        </div>
+        <div class="logiciels">
+            <div class="logiciel">
+                <svg class="icon icon--xl">
+                    <use xlink:href="#icon-au"></use>
+                </svg>
+            </div>
+            <div class="logiciel">
+                <svg class="icon icon--xl">
+                    <use xlink:href="#icon-logiciel1"></use>
+                </svg>
+            </div>
+            <div class="logiciel">
+                <svg class="icon icon--xl">
+                    <use xlink:href="#icon-logiciel2"></use>
+                </svg>
+            </div>
+            <div class="logiciel">
+                <svg class="icon icon--xl">
+                    <use xlink:href="#icon-logiciel3"></use>
+                </svg>
+            </div>
+            <div class="logiciel">
+                <svg class="icon icon--xl">
+                    <use xlink:href="#icon-figma"></use>
+                </svg>
+            </div>
+            <div class="logiciel">
+                <svg class="icon icon--xl">
+                    <use xlink:href="#icon-ps"></use>
+                </svg>
+            </div>
+            <div class="logiciel">
+                <svg class="icon icon--xl">
+                    <use xlink:href="#icon-ai"></use>
+                </svg>
+            </div>
+            <div class="logiciel">
+                <svg class="icon icon--xl">
+                    <use xlink:href="#icon-ae"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="swiper swiper-projets" data-component="Carousel" data-carousel="galerie">
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide slide img-container">
+                    <div class="video video-projet" data-component="Video" data-video-id="LEdJOMHxzM0" data-controls-hide="true">
+                        <div class="video__media js-video">
+                            <img src="assets/images/swiper1.png" alt="teaser de production" class="js-poster">
+                            <svg class="icon icon--xl">
+                                <use xlink:href="#icon-play"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide img-container">
+                    <img src="./assets/images/swiper2.png" alt="img swiper">
+                </div>
+                <div class="swiper-slide img-container">
+                    <img src="./assets/images/swiper3.png" alt="img swiper">
+                </div>
+                <div class="swiper-slide img-container">
+                    <img src="./assets/images/swiper4.png" alt="img swiper">
+                </div>
+                <div class="swiper-slide slide img-container">
+                    <div class="video video-projet" data-component="Video" data-video-id="LEdJOMHxzM0" data-controls-hide="true">
+                        <div class="video__media js-video">
+                            <img src="assets/images/swiper5.png" alt="teaser de production" class="js-poster">
+                            <svg class="icon icon--xl">
+                                <use xlink:href="#icon-play"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide img-container">
+                    <img src="./assets/images/swiper6.png" alt="img swiper">
+                </div>
+                <div class="swiper-slide img-container">
+                    <img src="./assets/images/swiper7.png" alt="img swiper">
+                </div>
+                
+            </div>
+        </div>
+        <div class="glass">
+            <img src="./assets/images/swiper-bg.png" class="bg" alt="swiper bg">
+        </div>
+        
+    </div>
+
+    <div class="contact" id="contact">
+        <h1>Contactez moi !</h1>
+        <form action="" class="form-container">
+            <div class="row">
+                <div class="input-container">
+                    <span>
+                        <img src="./assets/icons/avatar.png" alt="avatar icon">
+                    </span>
+                    <input type="text" name="nom" class="input" placeholder="Votre nom">
+                </div>
+                <div class="input-container">
+                    <span>
+                        <img src="./assets/icons/mail.png" alt="avatar icon">
+                    </span>
+                    <input type="email" name="email" class="input" placeholder="Votre email">
+                </div>
+            </div>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Votre message..."></textarea>
+            <div class="button-container-1">
+                <span class="mas">Envoyer</span>
+                <button id='work' type="button" name="Hover">Envoyer</button>
+            </div>
+        </form>
+    </div>
+</section>
+<footer class="footer">
+    <h2>Rejoingner moi sur</h2>
+    <div>
+        <h3>(438) 885-6816</h3>
+        <h3>maria.benlaredj@gmail.com</h3>
+    </div>
+    <ul>
+        <li><a href="https://www.youtube.com" target="_blank">
+            <svg class="icon icon--lg">
+                <use xlink:href="#icon-youtube"></use>
+            </svg>
+        </a></li>
+        <li><a href="https://www.behance.net/" target="_blank">
+            <svg class="icon icon--lg">
+                <use xlink:href="#icon-be"></use>
+            </svg>
+        </a></li>
+        <li><a href="https://www.linkedin.com/" target="_blank">
+            <svg class="icon icon--lg">
+                <use xlink:href="#icon-linkedin"></use>
+            </svg>
+        </a></li>
+        <li><a href="https://www.instagram.com/" target="_blank">
+            <svg class="icon icon--lg">
+                <use xlink:href="#icon-instagram"></use>
+            </svg>
+        </a></li>
+    </ul>
+    <div class="glass">
+        <img src="./assets/images/footer.png" alt="footer img">
+    </div>
+</footer>
+<!-- custom-cursor -->
+<div class="cursor" data-component="Cursor" data-hover="button a">
+    <div class="cursor2"></div>
+</div> 
+
+
+
+
+
+{% include '_partials/_footer.html' %}

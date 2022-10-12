@@ -1,0 +1,77 @@
+.video {
+    color: var(--color-white);
+    text-align: center;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative; 
+    cursor: pointer;
+    margin: 300px 0 150px 0;
+
+    .video-border {
+        position: absolute;
+        left: 0px;
+        top: -150px;
+        height: 350px;
+        width: calc(100% - 100px);
+        border: 2px solid var(--color-secondary-opac);
+        border-bottom: 0;
+        border-top: 0;
+        border-radius: 5px;
+
+        &::after, &::before {
+            content: "";
+            position: absolute;
+            left: -10px;
+            width: calc(100% + 20px);
+            height: 2px;
+            background: var(--color-secondary-opac);
+        }
+        &::before {
+            top: 10px;
+        }
+        &::after {
+            bottom: 10px;
+        }
+    }
+    img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+    .icon {
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-shadow: 0 0 4px rgba(0,0,0,1);
+        transition: 0.4s $ease-out-expo;
+        transition-property: opacity, transform;
+        transform-origin: 0 0;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+
+        .is-video-ready  & {
+            opacity: 1;
+        }
+    }
+    &:hover .icon {
+        transform: scale(0.8) translate(-50%, -50%);
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+        .video-border {
+            display: none;
+        }
+    }
+}
+.video__media {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    height: 100%;
+    width: calc(100% - 100px);
+
+    @media screen and (max-width: $breakpoint-sm) {
+        left: 0;
+        width: 100%;
+    }
+}
