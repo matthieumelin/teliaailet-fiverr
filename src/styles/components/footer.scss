@@ -40,6 +40,7 @@
             padding: 10px;
             border-radius: 50%;
             color: var(--color-primary);
+            box-shadow: 5px 3px 3px rgb(0 0 0 / 7%);
         }
     }
 
@@ -51,6 +52,10 @@
         div {
             flex-direction: column;
             text-align: center;
+        }
+
+        ul {
+            padding: 0;
         }
     }
 

@@ -12,6 +12,7 @@ $col) {
  border: $bor;
  color: $col;
 }
+
 .header {
     width: 100%;
     display: flex;
@@ -201,7 +202,8 @@ $col) {
         }
         .respo-nav {
             display: flex;
-            padding: 30px 40px;
+            padding: 20px;
+            align-items: center;
             justify-content: space-between;
             .logo-container {
                 img {
@@ -239,7 +241,6 @@ $col) {
 
         
     }
-    
 }
 .nav-is-active {
     overflow: hidden;

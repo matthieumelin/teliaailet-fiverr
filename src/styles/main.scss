@@ -6,11 +6,20 @@
     src: local("Backline-JRV5n"),
         url("../assets/fonts/Backline-JRV5n.otf") format("opentype");
 }
-
 @font-face {
     font-family: "FuturaHandwritten";
     src: local("FuturaHandwritten"),
         url("../assets/fonts/FuturaHandwritten.ttf") format("truetype");
+}
+@font-face {
+    font-family: "KGShadowOfTheDay";
+    src: local("KGShadowOfTheDay"),
+        url("../assets/fonts/KGShadowOfTheDay.ttf") format("truetype");
+}
+@font-face {
+    font-family: "KGShadowOfTheNight";
+    src: local("KGShadowOfTheNight"),
+        url("../assets/fonts/KGShadowOfTheNight.ttf") format("truetype");
 }
 
 // TOOLS

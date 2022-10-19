@@ -5,12 +5,16 @@
     flex-direction: column;
     gap: 30px;
 
+    h1 {
+        font-family: 'Backline-JRV5n';
+    }
+
     .projet {
         display: flex;
         gap: 30px;
         align-items: center;
         width: 100%;
-        
+
         .left {
             display: flex;
             flex-direction: column;
@@ -28,20 +32,29 @@
                 left: 0;
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 z-index: -1;
-        
+
                 img {
                     width: 100%;
                     height: 100%;
                 }
-        
             }
             h2 {
-                margin: 10px 0;
+                margin: 0 auto 0 0;
                 font-size: var(--font-size-h3);
             }
-            p {
-                width: 50%;
+            .description {
+                margin: 0 auto 0 0;
             }
+        }
+        .chapitre {
+            font-family: "KGShadowOfTheNight";
+            font-weight: 400;
+        }
+        .titre {
+            font-size: 4rem;
+            font-family: "KGShadowOfTheDay";
+            letter-spacing: 15px;
+            margin: 0 auto 0 0;
         }
         .center {
             position: relative;
@@ -54,6 +67,8 @@
                     transition: 0.3s all ease-in-out;
 
                     &:hover {
+                        transform: scale(1.1);
+                        transition: 0.3s all ease-in-out;
                         filter: none;
                         -webkit-filter: grayscale(0);
                     }
@@ -64,17 +79,21 @@
                 height: 100%;
                 .video-projet {
                     margin: 100px auto;
-        
-                    .video__media{
+
+                    .video__media {
                         height: 100%;
                         color: var(--color-primary);
-
+                        
                         img {
+                            object-fit: contain;
+                            transform: scale(1.7);
                             filter: grayscale(100%);
                             -webkit-filter: grayscale(100%);
                             transition: 0.3s all ease-in-out;
-        
+
                             &:hover {
+                                transform: scale(1.9);
+                                transition: 0.3s all ease-in-out;
                                 filter: none;
                                 -webkit-filter: grayscale(0);
                             }
@@ -94,6 +113,8 @@
                     background-color: var(--color-primary);
                     border-radius: 5px;
                     svg {
+                        width: 30px;
+                        height: 30px;
                         color: var(--color-white);
                     }
                 }
@@ -107,17 +128,24 @@
             img {
                 filter: grayscale(100%);
                 -webkit-filter: grayscale(100%);
-                transition: all 0.3s ease-in-out;
+                transition: 0.3s all ease-in-out;
 
                 &:hover {
+                    transform: scale(1.1);
+                    transition: 0.3s all ease-in-out;
                     filter: none;
                     -webkit-filter: grayscale(0);
                 }
             }
             div {
                 a {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
                     color: var(--color-primary-light);
+                    width: 100%;
                     span {
+                        font-family: "Backline-JRV5n";
                         font-size: var(--font-size-h2);
                     }
                 }
@@ -129,13 +157,12 @@
         padding-bottom: 100px;
         margin-bottom: 100px;
 
-        .bg-autres{
+        .bg-autres {
             position: absolute;
             width: 12%;
             right: -60px;
             top: -170px;
             z-index: -100;
-
         }
         .description-container {
             p {
@@ -147,20 +174,33 @@
             display: flex;
             gap: 20px;
             justify-content: center;
-            align-items: center;
 
             .logiciel {
                 background-color: var(--color-primary);
-                padding: 5px;
                 font-weight: 400;
                 border-radius: 10px;
+                padding: 5px;
                 color: var(--color-white);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 60px;
+                width: 100%;
             }
             .log2 {
-                padding: 15px;
+                padding: 15px 0px;
             }
             .log3 {
                 padding: 7px 0px;
+            }
+            img {
+                padding: 5px;
+                object-fit: contain;
+            }
+            svg {
+                padding: 5px;
+                width: 60px;
+                height: 60px;
             }
         }
         .swiper-projets {
@@ -174,8 +214,11 @@
                         margin: 0;
 
                         .video__media {
-                            width: 100%;
-                            height: 100%;
+
+                            img {
+                                object-fit: contain;
+                                transform: scale(1.5);
+                            }
                         }
                     }
                 }
@@ -189,14 +232,13 @@
             right: 0;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             z-index: -1;
-    
+
             img {
                 width: 100%;
             }
-    
         }
     }
-    
+
     @media screen and (max-width: $breakpoint-md) {
         padding: 30px 20px 30px 30px;
         .projet {
@@ -222,10 +264,9 @@
                 }
             }
             .logiciels {
-                flex-direction: column;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
             }
         }
-
     }
-    
 }

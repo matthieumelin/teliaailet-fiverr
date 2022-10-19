@@ -26,7 +26,8 @@ $col) {
 
             .input-container {
                 border: 1px solid rgba(33, 26, 68, 0.5);
-                padding: 5px 25px;
+                border-radius: 10px;
+                padding: 10px;
                 display: flex;
                 gap: 10px;
                 align-items: center;
@@ -35,11 +36,13 @@ $col) {
                     display: flex;
                     align-items: center;
                     img {
-                        width: 40px;
+                        height: 30px;
+                        width: 30px;
                     }
                 }
 
                 input {
+                    font-family: "FuturaHandwritten";
                     border: none;
                     outline: none;
                     background: transparent;
@@ -47,35 +50,37 @@ $col) {
             }
         }
         textarea {
+            resize: vertical;
+            font-family: "FuturaHandwritten";
+            min-height: 150px;
             width: 100%;
             padding: 15px 10px;
+            border-radius: 10px;
             border: 1px solid rgba(33, 26, 68, 0.5);
             outline: none;
+            background-color: transparent;
         }
         .button-container-1 {
             position: relative;
             display: block;
-            width: fit-content;
+            width: 100%;
             height: 50px;
+            margin-top: 30px;
             margin-left: auto;
             margin-right: 0;
             overflow: hidden;
             border: 1px solid var(--color-primary);
-            font-weight: 300;
             transition: 0.5s;
-            
-            letter-spacing: 1px;
              border-radius: 8px;
-           
+             box-shadow: 7px 10px 2px rgb(0 0 0 / 13%);
             button {
-             width: 101%;
-             text-transform: uppercase;
+                text-align: center;
+                text-transform: uppercase;
+                width: 100%;
              height: 100%;
-             font-weight: 300;
              padding: 13px 50px;
-             letter-spacing: 2px;
-             font-weight: bold;
-             font-family: var(--font-third);
+             letter-spacing: 5px;
+             font-family: "KGShadowOfTheDay";
              margin: 0;
            
              @include button(var(--color-primary),
@@ -96,15 +101,15 @@ $col) {
                 position: absolute;
                 color: var(--color-primary);
                 text-align: center;
-                font-family: var(--font-third);
-                width: 101%;
-                font-weight: 300;
+                font-family: "KGShadowOfTheDay";
+                width: 100%;
                 position: absolute;
                 margin-top: 10px;
+                letter-spacing: 5px;
                 overflow: hidden;
                 font-weight: bold;
                 text-transform: uppercase;
-            
+                padding: 2px 50px;
             }
             @-webkit-keyframes ani {
                 from {
