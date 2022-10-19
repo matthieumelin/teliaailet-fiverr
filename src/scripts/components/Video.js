@@ -47,13 +47,12 @@ export default class Video {
     init() {
         
         this.initPlayer = this.initPlayer.bind(this)
-          if (this.poster) {
-              this.element.addEventListener("click",this.initPlayer)
-          }
-          else {
+        if (this.poster) {
+            this.element.addEventListener("click",this.initPlayer)
+        }
+        else {
               this.initPlayer();
           }
-      
       }
       /**
      * Méthode de lancement du player vidéo
@@ -84,7 +83,7 @@ export default class Video {
                       });
                       observer.observe(this.element);
                   },
-                  onStateCHange: (event) => {
+                  onStateChange: (event) => {
                       if (event.data == YT.PlayerState.PLAYING) {
                           //pause tous les videos sauf celui qui joue
                           Video.pauseAll(this);

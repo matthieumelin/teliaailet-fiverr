@@ -1,16 +1,11 @@
-@mixin button($bcolor,
-$url,
-$x1,
-$y1,
-$bor,
-$col) {
- background: $bcolor;
- -webkit-mask: url($url);
- mask: url($url);
- -webkit-mask-size: $x1 $y1;
- mask-size: $x1 $y1;
- border: $bor;
- color: $col;
+@mixin button($bcolor, $url, $x1, $y1, $bor, $col) {
+    background: $bcolor;
+    -webkit-mask: url($url);
+    mask: url($url);
+    -webkit-mask-size: $x1 $y1;
+    mask-size: $x1 $y1;
+    border: $bor;
+    color: $col;
 }
 
 .header {
@@ -25,7 +20,7 @@ $col) {
     .respo-nav {
         display: none;
     }
-  
+
     .nav-primary {
         width: 100%;
         display: flex;
@@ -38,19 +33,15 @@ $col) {
             gap: 110px;
             position: relative;
 
-            
             .pages {
                 flex: auto;
                 display: flex;
                 //align-items: center;
                 justify-content: flex-end;
 
-                
-                
-        
                 .page-container {
                     padding: 12px 10px;
-                    
+
                     a {
                         width: 100%;
                         display: block;
@@ -63,7 +54,7 @@ $col) {
                         position: relative;
                         font-size: var(--font-size-h5);
                         &::after {
-                            content: "";
+                            content: '';
                             position: absolute;
                             bottom: 0px;
                             left: 10%;
@@ -75,14 +66,13 @@ $col) {
                             transition: transform 0.3s ease-in;
                             transform-origin: right;
                         }
-                        &:hover:after  {
+                        &:hover:after {
                             transform: scaleX(1);
                             transform-origin: left;
                             transition: transform 0.3s ease-out;
                         }
                     }
                 }
-                
             }
         }
         .right {
@@ -95,38 +85,40 @@ $col) {
                 border: 1px solid var(--color-primary);
                 font-weight: 300;
                 transition: 0.5s;
-                
-                letter-spacing: 1px;
-                 border-radius: 8px;
-               
-                button {
-                 width: 101%;
-                 text-transform: uppercase;
-                 height: 100%;
-                 font-weight: 300;
-                 padding: 13px 15px;
-                 letter-spacing: 1px;
-                 font-weight: bold;
-                 font-family: var(--font-primary);
-                 margin: 0;
-               
-                 @include button(var(--color-primary),
-                 "https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png",
-                 2300%,
-                 100%,
-                 none,
-                 #fff);
-                 -webkit-animation: ani2 0.7s steps(22) forwards;
-                 animation: ani2 0.7s steps(22) forwards;
-               
-                 &:hover {
-                  -webkit-animation: ani 0.7s steps(22) forwards;
-                  animation: ani 0.7s steps(22) forwards;
-                 }
 
-                 a {
-                    color: var(--color-white);
-                 }
+                letter-spacing: 1px;
+                border-radius: 8px;
+
+                button {
+                    width: 101%;
+                    text-transform: uppercase;
+                    height: 100%;
+                    font-weight: 300;
+                    padding: 13px 15px;
+                    letter-spacing: 1px;
+                    font-weight: bold;
+                    font-family: var(--font-primary);
+                    margin: 0;
+
+                    @include button(
+                        var(--color-primary),
+                        'https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png',
+                        2300%,
+                        100%,
+                        none,
+                        #fff
+                    );
+                    -webkit-animation: ani2 0.7s steps(22) forwards;
+                    animation: ani2 0.7s steps(22) forwards;
+
+                    &:hover {
+                        -webkit-animation: ani 0.7s steps(22) forwards;
+                        animation: ani 0.7s steps(22) forwards;
+                    }
+
+                    a {
+                        color: var(--color-white);
+                    }
                 }
                 .mas {
                     position: absolute;
@@ -140,48 +132,43 @@ $col) {
                     overflow: hidden;
                     font-weight: bold;
                     text-transform: uppercase;
-                
                 }
                 @-webkit-keyframes ani {
                     from {
-                     -webkit-mask-position: 0 0;
-                     mask-position: 0 0;
+                        -webkit-mask-position: 0 0;
+                        mask-position: 0 0;
                     }
-                   
+
                     to {
-                     -webkit-mask-position: 100% 0;
-                     mask-position: 100% 0;
+                        -webkit-mask-position: 100% 0;
+                        mask-position: 100% 0;
                     }
-                   }
-                   @keyframes ani2 {
+                }
+                @keyframes ani2 {
                     from {
-                     -webkit-mask-position: 100% 0;
-                     mask-position: 100% 0;
+                        -webkit-mask-position: 100% 0;
+                        mask-position: 100% 0;
                     }
-                   
+
                     to {
-                     -webkit-mask-position: 0 0;
-                     mask-position: 0 0;
+                        -webkit-mask-position: 0 0;
+                        mask-position: 0 0;
                     }
-                   }
-                   
-                   @keyframes ani {
+                }
+
+                @keyframes ani {
                     from {
-                     -webkit-mask-position: 0 0;
-                     mask-position: 0 0;
+                        -webkit-mask-position: 0 0;
+                        mask-position: 0 0;
                     }
-                   
+
                     to {
-                     -webkit-mask-position: 100% 0;
-                     mask-position: 100% 0;
+                        -webkit-mask-position: 100% 0;
+                        mask-position: 100% 0;
                     }
-                   }
-                
-                
-               }
-               
+                }
+            }
         }
-        
     }
 
     @media screen and (max-width: $breakpoint-md) {
@@ -206,6 +193,7 @@ $col) {
             align-items: center;
             justify-content: space-between;
             .logo-container {
+                //ICI
                 img {
                     max-width: 55%;
                 }
@@ -224,22 +212,19 @@ $col) {
                 justify-content: space-between;
                 padding: 10px;
                 cursor: pointer;
-    
+
                 span {
                     height: 4px;
                     width: 100%;
                     background-color: var(--color-secondary);
                     display: inline-block;
                     border-radius: 5px;
-    
                 }
                 @media screen and (min-width: $breakpoint-md) {
                     display: none;
                 }
             }
         }
-
-        
     }
 }
 .nav-is-active {
@@ -305,7 +290,6 @@ $col) {
                     }
                 }
             }
-            
         }
     }
 }
