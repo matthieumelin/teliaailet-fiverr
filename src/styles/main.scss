@@ -1,6 +1,18 @@
 //FONTS
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
+@font-face {
+    font-family: "Backline-JRV5n";
+    src: local("Backline-JRV5n"),
+        url("../assets/fonts/Backline-JRV5n.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "FuturaHandwritten";
+    src: local("FuturaHandwritten"),
+        url("../assets/fonts/FuturaHandwritten.ttf") format("truetype");
+}
+
 // TOOLS
 // mixins et fonctions utilisés globalement dans le SCSS (Sass)
 @import 'tools/cover';

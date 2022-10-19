@@ -122,6 +122,10 @@ $col) {
                   -webkit-animation: ani 0.7s steps(22) forwards;
                   animation: ani 0.7s steps(22) forwards;
                  }
+
+                 a {
+                    color: var(--color-white);
+                 }
                 }
                 .mas {
                     position: absolute;
@@ -199,6 +203,11 @@ $col) {
             display: flex;
             padding: 30px 40px;
             justify-content: space-between;
+            .logo-container {
+                img {
+                    max-width: 55%;
+                }
+            }
 
             .header__toggle {
                 --size: 50px;

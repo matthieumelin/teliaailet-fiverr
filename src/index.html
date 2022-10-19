@@ -1,7 +1,7 @@
 {%
     include '_partials/_header.html'
 %}
-<img src="./assets/images/header-bg.png" class="bg" alt="header background">
+<img src="./assets/images/header-bg.png" class="bg bg1" alt="header background">
    
 <header class="header" data-component="Header" data-hide="auto">
     <div class="respo-nav">
@@ -47,7 +47,9 @@
         <div class="right">
             <div class="button-container-1">
                 <span class="mas">Telecharger mon cv</span>
-                <button id='work' type="button" name="Hover">Telecharger mon cv</button>
+                <button id='work' type="button" name="Hover">
+                    <a href="./assets/CV.pdf" download="cv">Telecharger mon cv</a>
+                </button>
             </div>
         
         </div>
@@ -98,11 +100,11 @@
 </section>
 <section class="apropos" id="apropos">
     <div class="propos">
-        <h1>Àpropos de moi</h1>
+        <h1>À propos de moi</h1>
         <div>
             <img src="./assets/images/apropos.png" alt="a propos photo">
-            <p>Je m'appelle Maria iChtar, finissante en techniques d’intégration multimédia, au cégep d'Édouard-Montpetit. Je me cherche actuellement un stage en design
-                ou et en vidéo.</p>
+            <p>Je m'appelle Maria iChtar, finissante en techniques d’intégration multimédia, au <br /> cégep d'Édouard-Montpetit. Je me cherche actuellement un stage en design
+                <br /> ou et en vidéo.</p>
         </div>
         <ul>
             <li class="odd">
@@ -502,9 +504,9 @@
         </div>
         <div class="logiciels">
             <div class="logiciel">
-                <svg class="icon icon--xl">
-                    <use xlink:href="#icon-au"></use>
-                </svg>
+                <div class="logiciel log3">
+                    <img src="./assets/images/au.png" alt="icon" class="logoLog">
+                </div>
             </div>
             <div class="logiciel">
                 <svg class="icon icon--xl">
@@ -526,20 +528,14 @@
                     <use xlink:href="#icon-figma"></use>
                 </svg>
             </div>
-            <div class="logiciel">
-                <svg class="icon icon--xl">
-                    <use xlink:href="#icon-ps"></use>
-                </svg>
+            <div class="logiciel log2">
+                <img src="./assets/images/ps.png" alt="icon" class="logoLog">
             </div>
-            <div class="logiciel">
-                <svg class="icon icon--xl">
-                    <use xlink:href="#icon-ai"></use>
-                </svg>
+            <div class="logiciel log2">
+                <img src="./assets/images/ai.png" alt="icon" class="logoLog">
             </div>
-            <div class="logiciel">
-                <svg class="icon icon--xl">
-                    <use xlink:href="#icon-ae"></use>
-                </svg>
+            <div class="logiciel log2">
+                <img src="./assets/images/ae.png" alt="icon" class="logoLog">
             </div>
         </div>
         <div class="swiper swiper-projets" data-component="Carousel" data-carousel="galerie">
@@ -591,13 +587,14 @@
 
     <div class="contact" id="contact">
         <h1>Contactez moi !</h1>
-        <form action="" class="form-container">
+        <form action="https://formsubmit.co/maria.benlaredj@gmail.com" method="POST" class="form-container">
+            <input type="hidden" name="_captcha" value="false">
             <div class="row">
                 <div class="input-container">
                     <span>
                         <img src="./assets/icons/avatar.png" alt="avatar icon">
                     </span>
-                    <input type="text" name="nom" class="input" placeholder="Votre nom">
+                    <input type="text" name="name" class="input" placeholder="Votre nom">
                 </div>
                 <div class="input-container">
                     <span>
@@ -609,7 +606,7 @@
             <textarea name="message" id="message" cols="30" rows="10" placeholder="Votre message..."></textarea>
             <div class="button-container-1">
                 <span class="mas">Envoyer</span>
-                <button id='work' type="button" name="Hover">Envoyer</button>
+                <button id='work' type="submit" name="Hover">Envoyer</button>
             </div>
         </form>
     </div>

@@ -156,6 +156,12 @@
                 border-radius: 10px;
                 color: var(--color-white);
             }
+            .log2 {
+                padding: 15px;
+            }
+            .log3 {
+                padding: 7px 0px;
+            }
         }
         .swiper-projets {
             .swiper-wrapper {
@@ -192,6 +198,7 @@
     }
     
     @media screen and (max-width: $breakpoint-md) {
+        padding: 30px 20px 30px 30px;
         .projet {
             flex-direction: column;
 
